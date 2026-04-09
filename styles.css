@@ -157,15 +157,12 @@ h1 {
   margin-bottom: 28px;
 }
 
-.section-heading--left {
-  justify-content: flex-start;
-}
-
 .section-heading__line {
   flex: 1;
   max-width: 72px;
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--accent-soft), transparent);
+  justify-self: center;
 }
 
 h2 {
@@ -506,6 +503,10 @@ h3 {
     grid-template-columns: 1fr;
   }
 
+  .timeline{
+    text-align: center;
+  }
+
   .timeline__item,
   .countdown {
     grid-template-columns: 1fr;
@@ -513,12 +514,19 @@ h3 {
 
   .timeline__item {
     gap: 8px;
+    text-align: center;
   }
 
   .timeline__time {
     font-size: 1rem;
+    text-align: center;
   }
 
+  .timeline__item1,
+  .timeline__item2,
+  .timeline__item3,
+  .timeline__item4,
+  .timeline__item5,
   .info-card {
     grid-template-columns: 1fr;
   }
@@ -526,12 +534,14 @@ h3 {
   .timeline__content {
     grid-template-columns: 1fr;
     gap: 8px;
+    justify-self: center;
   }
 
   .timeline__media,
   .info-card__media {
     min-height: 220px;
-    justify-self: central;
+    min-width: 250px;
+    justify-self: center;
   }
 
   .actions{
