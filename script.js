@@ -9,8 +9,8 @@ const confirmButton = document.getElementById("confirmButton");
 const bgMusic = document.getElementById("bgMusic");
 
 const songs = [
-  "./songs/a-thousand-years",
-  "./songs/turning-page"
+  "./songs/a-thousand-years.mp3",
+  "./songs/turning-page.mp3"
 ]
 
 const selectedSong = Math.random() < 0.5 ? songs[0] : songs[1];
