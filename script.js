@@ -6,15 +6,36 @@ const hoursEl = document.getElementById("hours");
 const minutesEl = document.getElementById("minutes");
 const secondsEl = document.getElementById("seconds");
 const confirmButton = document.getElementById("confirmButton");
+const bgMusic = document.getElementById("bgMusic");
+
+const songs = [
+  "./songs/a-thousand-years",
+  "./songs/turning-page"
+]
+
+const selectedSong = Math.random() < 0.5 ? songs[0] : songs[1];
+bgMusic.src = selectedSong;
+
+let musicStarted = false;
 
 const whatsappNumbers = [
   "522321782066",
-  "522292652362"
+  "522286123149"
 ];
 
 const whatsappMessage = encodeURIComponent(
   "Hola, queremos confirmar nuestra asistencia a su boda. Muchas felicidades, nos vemos pronto."
 );
+
+function startMusicOnce(){
+  if (musicStarted) return;
+  musicStarted = true;
+
+  bgMusic.volume = 0.45;
+  bgMusic.play().catch(() => {
+    musicStarted = false;
+  });
+}
 
 function updateCountdown() {
   const now = new Date();
@@ -67,6 +88,9 @@ confirmButton.addEventListener("click", () => {
   const whatsappUrl = `https://wa.me/${selectedNumber}?text=${whatsappMessage}`;
   window.open(whatsappUrl, "_blank");
 });
+
+document.addEventListener("click", startMusicOnce, {once: true});
+document.addEventListener("touchstart", startMusicOnce, {once: true});
 
 updateCountdown();
 setInterval(updateCountdown, 1000);

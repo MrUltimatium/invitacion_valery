@@ -1,8 +1,8 @@
 @font-face {
-  font-family: "Sweet Apricot";
-  src: url("./fonts/SweetApricot.ttf") format("truetype");
+  font-family: "Peanut Butter";
+  src: url("./fonts/PeanutButter.ttf") format("truetype");
   font-weight: normal;
-  font-style: italic;
+  font-style: normal;
   text-transform: uppercase;
 }
 
@@ -29,8 +29,9 @@
 body {
   margin: 0;
   min-height: 100vh;
-  font-family: "Sweet Apricot","Montserrat", sans-serif;
-  font-size: x-large;
+  font-family: "Peanut Butter","Montserrat", sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
   color: var(--text);
   background:
     radial-gradient(circle at top, rgba(201, 173, 145, 0.45), transparent 35%),
@@ -138,7 +139,7 @@ h1 {
 .lead {
   width: min(680px, 100%);
   margin: 0 auto;
-  font-size: 2rem;
+  font-size: 1.7rem;
   line-height: 1;
   color: #ffffff;
 }
@@ -182,7 +183,7 @@ h2 {
 
 .countdown-message {
   margin: 0 0 20px;
-  font-size: 1.2rem;
+  font-size: 2rem;
   color: var(--muted);
 }
 
@@ -219,15 +220,84 @@ h2 {
   gap: 18px;
 }
 
-.timeline__item {
+.timeline__item1 {
   display: grid;
   grid-template-columns: minmax(0, 1.4fr) minmax(220px, 320px);
   gap: 18px;
-  align-items: stretch;
+  align-items: center;
   padding: 18px;
   border-radius: 22px;
-  background: var(--paper-strong);
-  border: 1px solid rgba(138, 106, 74, 0.12);
+  border: 2.5px solid rgb(138, 106, 74);
+  background-image:
+    linear-gradient(rgb(255, 255, 255), rgba(255, 248, 240, 0.53)),
+    url("./img/fondo-iglesia.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.timeline__item2 {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(220px, 320px);
+  gap: 18px;
+  align-items: center;
+  padding: 18px;
+  border-radius: 22px;
+  border: 2.5px solid rgb(138, 106, 74);
+  background-image:
+    linear-gradient(rgb(255, 255, 255), rgba(255, 248, 240, 0.53)),
+    url("./img/fondo-salon.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.timeline__item3 {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(220px, 320px);
+  gap: 18px;
+  align-items: center;
+  padding: 18px;
+  border-radius: 22px;
+  border: 2.5px solid rgb(138, 106, 74);
+  background-image:
+    linear-gradient(rgb(255, 255, 255), rgba(255, 248, 240, 0.53)),
+    url("./img/fondo-fotos.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.timeline__item4 {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(220px, 320px);
+  gap: 18px;
+  align-items: center;
+  padding: 18px;
+  border-radius: 22px;
+  border: 2.5px solid rgb(138, 106, 74);
+  background-image:
+    linear-gradient(rgb(255, 255, 255), rgba(255, 248, 240, 0.53)),
+    url("./img/fondo-brindis.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.timeline__item5 {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(220px, 320px);
+  gap: 18px;
+  align-items: center;
+  padding: 18px;
+  border-radius: 22px;
+  border: 2.5px solid rgb(138, 106, 74);
+  background-image:
+    linear-gradient(rgb(255, 255, 255), rgba(255, 248, 240, 0.53)),
+    url("./img/baile-bar-fondo.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .timeline__content{
@@ -239,22 +309,28 @@ h2 {
 
 .timeline__time {
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 600;
+  align-items:center;
+  vertical-align: middle;
   letter-spacing: 0.08em;
   color: var(--accent);
 }
 
 .timeline__media{
-  min-height: 180px;
+  width: 180px;
+  height: 180px;
+  justify-self: end;
+  align-self: center;
   border-radius: 18px;
+  border: 2.5px solid rgb(138, 106, 74);
   overflow: hidden;
-  background: rgba(138, 106, 74, 0.08);
+  background: rgb(255, 255, 255);
 }
 
 .timeline__media img {
-  display: block;
-  width: 100;
+  display:flex;
+  width: 100%;
   height: 100%;
   object-fit: cover;
 }
@@ -297,7 +373,7 @@ h3 {
 }
 
 .info-card__media img {
-  display: block;
+  display: flex;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -366,6 +442,7 @@ h3 {
 .button--whatsapp {
   background: var(--whatsapp);
   color: #ffffff;
+  text-transform: uppercase;
   box-shadow: 0 14px 30px rgba(37, 211, 102, 0.28);
 }
 
@@ -442,7 +519,6 @@ h3 {
     font-size: 1rem;
   }
 
-  .timeline__item,
   .info-card {
     grid-template-columns: 1fr;
   }
@@ -455,6 +531,7 @@ h3 {
   .timeline__media,
   .info-card__media {
     min-height: 220px;
+    justify-self: central;
   }
 
   .actions{
