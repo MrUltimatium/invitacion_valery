@@ -12,6 +12,8 @@
   --whatsapp-dark: #1ebe5a;
   --maps: #1a73e8;
   --maps-dark: #1557b0;
+  --liverpool: #db0495;
+  --liverpool-dark: #c10281;
 }
 
 * {
@@ -338,7 +340,8 @@ h3 {
   color: var(--muted);
 }
 
-.text-block__wearing-code {
+.text-block__wearing-code
+.text-block__gifts-table {
   margin: 0;
   line-height: 1.8;
   color: var(--muted);
@@ -442,11 +445,24 @@ h3 {
   background: var(--maps);
   color: #ffffff;
   font-family: "Monserrat";
+  text-transform: uppercase;
   box-shadow: 0 14px 30px rgba(26, 115, 232, 0.28);
 }
 
 .button--maps:hover {
   background: var(--maps-dark);
+}
+
+.button--liverpool {
+  background: var(--liverpool);
+  color: #ffffff;
+  font-family: "Monserrat";
+  text-transform: uppercase;
+  box-shadow: 0 14px 30px rgba(188, 1, 148, 0.08);
+}
+
+.button--liverpool:hover {
+  background: var(--liverpool-dark);
 }
 
 .card--message {
